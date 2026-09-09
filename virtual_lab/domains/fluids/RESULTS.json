@@ -1,0 +1,101 @@
+{
+  "config": {
+    "device": "cuda",
+    "n_virtual": 10000,
+    "topk": 10,
+    "steps": 5,
+    "seed": 0
+  },
+  "device": "cuda",
+  "dataset": {
+    "full": [
+      10000,
+      2,
+      64,
+      64
+    ],
+    "holdout": [
+      1600,
+      2,
+      64,
+      64
+    ],
+    "ood_obstacle": [
+      320,
+      2,
+      64,
+      64
+    ]
+  },
+  "train": {
+    "B": {
+      "epochs": 25,
+      "batch": 64,
+      "base": 32,
+      "seed": 0,
+      "final_loss": 1.3524393025479538e-05,
+      "time_s": 163.39397597312927
+    },
+    "C": [
+      {
+        "epochs": 15,
+        "batch": 64,
+        "base": 32,
+        "seed": 0,
+        "final_loss": 2.5115009885916046e-05,
+        "time_s": 188.20230436325073
+      },
+      {
+        "epochs": 15,
+        "batch": 64,
+        "base": 32,
+        "seed": 1,
+        "final_loss": 1.7534519398905567e-05,
+        "time_s": 224.44509172439575
+      },
+      {
+        "epochs": 15,
+        "batch": 64,
+        "base": 32,
+        "seed": 2,
+        "final_loss": 2.2632618121316477e-05,
+        "time_s": 58.4426007270813
+      }
+    ]
+  },
+  "tests": {
+    "T1_one_step_B": 2.1521636517718434e-06,
+    "T1_one_step_C": 1.7165360623039306e-06,
+    "T3_interv_holdout_B": 4.91972966119647e-05,
+    "T3_interv_holdout_C": 6.769323721528053e-05,
+    "T2_rollout20_B": 0.0009708791930873589,
+    "T2_rollout20_C": 0.0008952716674067524,
+    "T2_rollout20_A": 0.012354005089182928,
+    "T4_obstacle_B": 7.4553961167112e-05,
+    "T4_obstacle_C": 7.398533634841442e-05,
+    "T4_var_C": 2.1791161998407916e-06,
+    "T4_var_C_train": 1.8977973377332091e-06,
+    "T5_nu_extrap_B": 0.0005071909199715811,
+    "T5_nu_extrap_C": 0.0003782975122798936,
+    "T6_H_eps1e-3_B": 13,
+    "T6_H_eps1e-3_C": 13,
+    "H_eps1e-3_ext50_B": 13,
+    "H_eps1e-3_ext50_C": 13,
+    "T7_R_discovery_top5_B": 0.4,
+    "T7_Delta_V2R_B": 0.0010662153290628628,
+    "T7_R_discovery_top5_C": 0.8,
+    "T7_Delta_V2R_C": -0.0009300796763931473
+  },
+  "agent": {
+    "n_virtual": 10000,
+    "topk": 10,
+    "steps": 5,
+    "virt_best": 0.5013225674629211,
+    "real_best": 0.4986516631173595,
+    "Delta_V2R": 0.0029829607683757196,
+    "R_discovery": 0.6
+  },
+  "timing_s": {
+    "eval_total": 66.41416883468628
+  }
+}
